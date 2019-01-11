@@ -19,4 +19,4 @@ Rectangle {
   }
 }
 ```
-### More info: [qtbig](www.qtbig.com)
+### More info: [qtbig](http://www.qtbig.com)
