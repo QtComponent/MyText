@@ -5,7 +5,7 @@
 </p>
 
 ## 使用示例
-```
+```qml
 Rectangle {
   width: 150; height: 30
 
@@ -22,7 +22,7 @@ Rectangle {
 }
 ```
 ## 源码
-```
+```qml
 import QtQuick 2.6
 
 Text {
