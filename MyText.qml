@@ -89,3 +89,76 @@ Text {
         }
     }
 }
+/*
+import QtQuick 1.1
+
+Item {
+    id: root
+        width: 150; height: fontSize*1.2 // default
+
+            /* public */
+    property alias text: _text.text
+        property int   fontSize: 20
+
+            clip: true
+
+                Text {
+                            id: _text
+                                            /* private */
+                                            property int textWidth: (-_text.width + root.width - 5)
+
+                                                    height: fontSize
+                                                            color: menuFontDisabledColor
+
+                                                                    text: ""
+                                                                            font.pixelSize: fontSize
+
+                                                                                    verticalAlignment: Text.AlignVCenter
+
+                                                                                            onXChanged: {
+                                                                                                            if (x == textWidth) {
+                                                                                                                                rightMovement.start()
+                                                                                                                                                }
+                                                                                                                        else if (x == 0){
+                                                                                                                                            leftMovement.start()
+                                                                                                                                                            }
+                                                                                                                                }
+
+                                        onTextChanged: {
+                                                                       if (_text.width <= root.width) {
+                                                                                           rightMovement.stop()
+                                                                                                               leftMovement.stop()
+                                                                                                                           }
+                                                                                   else {
+                                                                                                       leftMovement.start()
+                                                                                                                       }
+                                                                                           }
+
+                                                               Component.onCompleted: if (_text.width > root.width) leftMovement.start()
+
+                                                                           SequentialAnimation {
+                                                                                           id: leftMovement
+
+                                                                                                               PropertyAnimation {
+                                                                                                                                   target: _text
+                                                                                                                                                               property: "x"
+                                                                                                                                                                               from: 0
+                                                                                                                                                                                               to: _text.textWidth
+                                                                                                                                                                                                               duration: 3500
+                                                                                                                                                                                                                           }
+                                                                                                       }
+
+                                                                       SequentialAnimation {
+                                                                                       id: rightMovement
+
+                                                                                                           PropertyAnimation {
+                                                                                                                               target: _text
+                                                                                                                                                           property: "x"
+                                                                                                                                                                           from: _text.textWidth
+                                                                                                                                                                                           to: 0
+                                                                                                                                                                                                           duration: 3500
+                                                                                                                                                                                                                       }
+                                                                                                   }
+                                                                           }
+}
+*/
